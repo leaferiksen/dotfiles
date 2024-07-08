@@ -271,10 +271,14 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T { spawn "alacritty"; }
-    Mod+D { spawn "fuzzel"; }
-    XF86Search { spawn "fuzzel"; }
+    Mod+T       { spawn "alacritty"; }
+    Mod+D       { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
+
+    // Personal binds
+    Mod+E       { spawn "dolphin"; }
+    XF86Search  { spawn "fuzzel"; }
+    XF86LaunchA { spawn "darkman" "toggle"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -286,6 +290,7 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioRecord      allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
     XF86MonBrightnessUp         { spawn "brightnessctl" "set" "+10%"; }
     XF86MonBrightnessDown       { spawn "brightnessctl" "set" "10%-"; }
     Mod+XF86MonBrightnessUp     { spawn "brightnessctl" "-d" "kbd_backlight" "set" "+25"; }
@@ -471,9 +476,9 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+S { screenshot; }
-    Ctrl+Mod+S { screenshot-screen; }
-    Alt+Mod+S { screenshot-window; }
+    Mod+S       { screenshot; }
+    Ctrl+Mod+S  { screenshot-screen; }
+    Alt+Mod+S   { screenshot-window; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
