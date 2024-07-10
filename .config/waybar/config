@@ -13,7 +13,7 @@
 	// Choose the order of the modules
 	"modules-left": ["wlr/taskbar"],
 	"modules-center": ["clock"],
-	"modules-right": ["tray", "cpu", "memory", "pulseaudio", "battery"],
+	"modules-right": ["tray", "pulseaudio", "battery"],
 	// "modules-right": ["cpu", "memory", "battery", "network", "tray"],
 	// Modules configuration
 	// "sway/workspaces": {

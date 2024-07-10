@@ -1,15 +1,10 @@
-MenuBar=Disabled
-
 [DetailsMode]
 PreviewSize=32
 
 [General]
 AutoExpandFolders=true
 Version=202
-ViewPropsTimestamp=2024,7,4,22,15,53.239
-
-[InformationPanel]
-previewsShown=false
+ViewPropsTimestamp=2024,7,10,16,35,52.033
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -19,4 +14,4 @@ Places Icons Static Size=22
 ToolBarsMovable=Disabled
 
 [PreviewSettings]
-Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+Plugins=audiothumbnail,comicbookthumbnail,cursorthumbnail,directorythumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,fontthumbnail,ffmpegthumbs,blenderthumbnail,gsthumbnail,mobithumbnail,rawthumbnail
