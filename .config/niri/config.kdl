@@ -194,8 +194,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
-// spawn-at-startup "thunderbird"
-// spawn-at-startup "firefox"
+spawn-at-startup "firefox"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -248,9 +247,13 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^org\.mozilla\.firefox$"#
-    exclude app-id=r#"^org\.mozilla\.firefox$"# title="^File Upload"
+    match title="Mozilla Firefox"
     open-maximized true
+}
+
+window-rule {
+    match app-id="codium"
+    default-column-width { proportion 0.75; }
 }
 
 binds {
@@ -270,14 +273,14 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T       { spawn "alacritty"; }
-    Mod+D       { spawn "fuzzel"; }
+    // Mod+D       { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // Personal binds
     XF86Search  { spawn "fuzzel"; }
     XF86LaunchA { spawn "darkman" "toggle"; }
-    Mod+X       { spawn "dolphin"; }
-    Mod+E       { spawn "kwrite"; }
+    Mod+D       { spawn "dolphin"; }
+    Mod+C       { spawn "codium"; }
     Mod+M       { spawn "thunderbird"; }
     Mod+W       { spawn "firefox"; }
     Mod+Shift+W { spawn "chromium-browser"; }
@@ -454,7 +457,7 @@ binds {
     Mod+Shift+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
-    Mod+C { center-column; }
+    // Mod+C { center-column; }
 
     // Finer width adjustments.
     // This command can also:
