@@ -84,6 +84,14 @@ input {
     position x=1280 y=0
 }
 
+output "eDP-1" {
+    position x=0 y=0
+}
+output "HDMI-A-1" {
+    mode "1280x768@60.000"
+    position x=1512 y=0
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
@@ -194,7 +202,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
-spawn-at-startup "firefox"
+// spawn-at-startup "firefox"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -279,12 +287,13 @@ binds {
     // Personal binds
     XF86Search  { spawn "fuzzel"; }
     XF86LaunchA { spawn "darkman" "toggle"; }
-    Mod+D       { spawn "dolphin"; }
+    Mod+X       { spawn "dolphin"; }
     Mod+C       { spawn "codium"; }
     Mod+M       { spawn "thunderbird"; }
     Mod+W       { spawn "firefox"; }
     Mod+Shift+W { spawn "chromium-browser"; }
     Mod+N       { spawn "flatpak" "run" "md.obsidian.Obsidian"; }
+    Mod+D       { spawn "flatpak" "run" "org.nickvision.tubeconverter"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -292,7 +301,7 @@ binds {
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" ".8"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" ".9"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
