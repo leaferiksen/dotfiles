@@ -176,8 +176,8 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         // off
 
-        width 4
-        active-color "#ffc87f"
+        width 8
+        active-color "#f3c4c4"
         inactive-color "#505050"
 
         // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
@@ -286,7 +286,7 @@ binds {
 
     // Personal binds
     XF86Search  { spawn "fuzzel"; }
-    XF86LaunchA { spawn "darkman" "toggle"; }
+    XF86LaunchA { spawn "set-theme"; }
     Mod+X       { spawn "dolphin"; }
     Mod+C       { spawn "codium"; }
     Mod+M       { spawn "thunderbird"; }
