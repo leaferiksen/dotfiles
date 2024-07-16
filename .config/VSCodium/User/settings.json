@@ -2,5 +2,6 @@
     "window.autoDetectColorScheme": true,
     "editor.minimap.enabled": false,
     "git.autofetch": true,
-    "git.openRepositoryInParentFolders": "always"
+    "git.openRepositoryInParentFolders": "always",
+    "git.confirmSync": false
 }
