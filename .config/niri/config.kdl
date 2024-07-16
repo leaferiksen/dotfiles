@@ -255,14 +255,13 @@ window-rule {
 
 window-rule {
     match title="Mozilla Firefox"
+    match app-id="zed"
     open-maximized true
 }
 
 window-rule {
-    match app-id="zed"
-    match app-id="codium"
     match app-id="gwenview"
-    default-column-width { proportion 0.75; }
+    default-column-width { proportion 0.6667; }
 }
 
 binds {
@@ -290,12 +289,11 @@ binds {
     XF86LaunchA { spawn "set-theme"; }
     Mod+P       { spawn "seahorse"; }
     Mod+X       { spawn "dolphin"; }
-    Mod+C       { spawn "codium"; }
     Mod+Z       { spawn "zed" "--new"; }
     Mod+G       { spawn "xdg-open" "/home/leaf/Pictures/Git Cheat Sheet.png"; }
     Mod+M       { spawn "thunderbird"; }
     Mod+W       { spawn "firefox"; }
-    Mod+Shift+W { spawn "chromium-browser"; }
+    Mod+Shift+W { spawn "chromium-browser" "--ozone-platform=wayland"; }
     Mod+N       { spawn "flatpak" "run" "md.obsidian.Obsidian"; }
     Mod+D       { spawn "flatpak" "run" "org.nickvision.tubeconverter"; }
 
@@ -470,7 +468,7 @@ binds {
     Mod+Shift+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
-    // Mod+C { center-column; }
+    Mod+C { center-column; }
 
     // Finer width adjustments.
     // This command can also:
