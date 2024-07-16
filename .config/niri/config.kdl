@@ -259,6 +259,7 @@ window-rule {
 }
 
 window-rule {
+    match app-id="zed"
     match app-id="codium"
     match app-id="gwenview"
     default-column-width { proportion 0.75; }
@@ -290,6 +291,7 @@ binds {
     Mod+P       { spawn "seahorse"; }
     Mod+X       { spawn "dolphin"; }
     Mod+C       { spawn "codium"; }
+    Mod+Z       { spawn "zed" "--new"; }
     Mod+G       { spawn "xdg-open" "/home/leaf/Pictures/Git Cheat Sheet.png"; }
     Mod+M       { spawn "thunderbird"; }
     Mod+W       { spawn "firefox"; }
