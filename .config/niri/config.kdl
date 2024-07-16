@@ -202,7 +202,6 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
-// spawn-at-startup "firefox"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -287,6 +286,7 @@ binds {
     // Personal binds
     XF86Search  { spawn "fuzzel"; }
     XF86LaunchA { spawn "set-theme"; }
+    Mod+P       { spawn "seahorse"; }
     Mod+X       { spawn "dolphin"; }
     Mod+C       { spawn "codium"; }
     Mod+M       { spawn "thunderbird"; }
