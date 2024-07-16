@@ -3,5 +3,6 @@
     "editor.minimap.enabled": false,
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "always",
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true
 }
