@@ -281,7 +281,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T       { spawn "alacritty"; }
-    // Mod+D       { spawn "fuzzel"; }
+    Mod+D       { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // Personal binds
@@ -295,7 +295,7 @@ binds {
     Mod+W       { spawn "firefox"; }
     Mod+Shift+W { spawn "chromium-browser" "--ozone-platform=wayland"; }
     Mod+N       { spawn "flatpak" "run" "md.obsidian.Obsidian"; }
-    Mod+D       { spawn "flatpak" "run" "org.nickvision.tubeconverter"; }
+    Mod+Y       { spawn "flatpak" "run" "org.nickvision.tubeconverter"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
