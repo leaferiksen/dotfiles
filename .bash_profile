@@ -9,7 +9,7 @@ fi
 # local binaries
 export PATH="$HOME/.local/bin:$PATH"
 # ssh keys in gnome secrets
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
+# export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 # kde settings for qt theming
 export QT_QPA_PLATFORMTHEME="kde"
 # hide zed's csd
