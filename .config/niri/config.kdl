@@ -255,7 +255,6 @@ window-rule {
 
 window-rule {
     match title="Mozilla Firefox"
-    match app-id="zed"
     open-maximized true
 }
 
@@ -288,13 +287,14 @@ binds {
     XF86Search  { spawn "fuzzel"; }
     XF86LaunchA { spawn "set-theme"; }
     Mod+P       { spawn "seahorse"; }
-    Mod+X       { spawn "dolphin"; }
+    Mod+N       { spawn "nautilus"; }
     Mod+Z       { spawn "zed" "--new"; }
     Mod+G       { spawn "xdg-open" "/home/leaf/Pictures/Git Cheat Sheet.png"; }
-    Mod+M       { spawn "thunderbird"; }
     Mod+W       { spawn "firefox"; }
     Mod+Shift+W { spawn "chromium-browser" "--ozone-platform=wayland"; }
-    Mod+N       { spawn "flatpak" "run" "md.obsidian.Obsidian"; }
+    Mod+M       { spawn "thunderbird"; }
+    Mod+X       { spawn "flatpak" "run" "org.gnome.Fractal"; }
+    Mod+O       { spawn "flatpak" "run" "md.obsidian.Obsidian"; }
     Mod+Y       { spawn "flatpak" "run" "org.nickvision.tubeconverter"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
