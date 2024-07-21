@@ -30,9 +30,16 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-alias u='sudo dnf update'
+alias u='sudo dnf update -y && flatpak update -y'
 
+alias l='ls -shAN --group-directories-first'
+alias ll='ls -lAN --group-directories-first'
+alias ..='cl ..'
+alias ...='cl ../..'
 function cl() {
-    cd "$@" && \
-    ls -F --color=auto
+    cd "$@" && l
+}
+
+function gcp() {
+    git commit -am "$1" && git push
 }
