@@ -15,11 +15,8 @@ export PATH
 export PATH="/var/lib/flatpak/exports/bin:$PATH"
 
 # ssh with gnome secrets
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
-
-# Pagination for Long Lists of Files
-# Remember columns for subprocesses.
-export COLUMNS
+eval $(/usr/bin/gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -34,21 +31,19 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-alias u='sudo dnf update -y && flatpak update -y'
+alias u='flatpak update -y && sudo dnf update -y'
+alias dc='xdg-open "$@" '
+alias gp='git push'
 
 function gcp() {
     git commit -am "$1" && git push
 }
 
-function l() {
-    command ls -shvANC --color=always --group-directories-first "$@" | less -R -X -F
-}
-function ll() {
-    command ls -lvAN --group-directories-first "$@" | less -R -X -F
-}
 function t() {
-    cd "$@" && l
+    cd "$@" && ls -shvANC --color=always --group-directories-first | less -R -X -F
 }
 function s() {
-    cd "$@" && ll
+    cd "$@" && ls -lvAN --color=always --group-directories-first | less -R -X -F
 }
+
+pwd && t

@@ -213,7 +213,7 @@ prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
-// The pcan I set the order with with spawn-at-startup launches apps? Trying to have thunderbird always be the first thing open, so like the farthest left appath is formatted with strftime(3) to give you the screenshot date and time.
+// The path is formatted with strftime(3) to give you the screenshot date and time.
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
@@ -263,6 +263,7 @@ window-rule {
 window-rule {
     match app-id="org.gnome.Loupe"
     match app-id="org.gnome.Evince"
+    match app-id="Alacritty"
     default-column-width { proportion 0.6667; }
 }
 window-rule {
@@ -519,7 +520,7 @@ binds {
     Alt+Mod+S   { screenshot-window; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod5+Q { quit; }
+    Mod+Shift+Q { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
