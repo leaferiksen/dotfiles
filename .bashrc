@@ -18,6 +18,9 @@ export PATH="/var/lib/flatpak/exports/bin:$PATH"
 eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
+# Remember columns for subprocesses.
+export COLUMNS
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -31,19 +34,21 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-alias u='flatpak update -y && sudo dnf update -y'
-alias dc='xdg-open "$@" '
+alias up='flatpak update -y && sudo dnf update -y'
+alias dc='xdg-open'
+alias gcp='git commit -a && git push'
+alias ga='git add -f'
 alias gp='git push'
 
-function gcp() {
-    git commit -am "$1" && git push
+function nt() {
+    cd "$@" &&
+    echo -e "\e[31m $(pwd) \e[0m" &&
+    ls -hovAN --color=always --group-directories-first | less -RF
+}
+function cl() {
+    mkdir -p "${1}"
+    cd "${1}"
 }
 
-function t() {
-    cd "$@" && ls -shvANC --color=always --group-directories-first | less -R -X -F
-}
-function s() {
-    cd "$@" && ls -lvAN --color=always --group-directories-first | less -R -X -F
-}
-
-pwd && t
+clear
+nt
