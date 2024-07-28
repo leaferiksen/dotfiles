@@ -11,15 +11,12 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
-# Flatpaks
+# Include Flatpak binaries in path
 export PATH="/var/lib/flatpak/exports/bin:$PATH"
 
 # ssh with gnome secrets
 eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
-
-# Remember columns for subprocesses.
-export COLUMNS
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
