@@ -264,6 +264,7 @@ window-rule {
     match app-id="org.gnome.Loupe"
     match app-id="org.gnome.Evince"
     match app-id="Alacritty"
+    match app-id="calibre-gui"
     default-column-width { proportion 0.6667; }
 }
 window-rule {
@@ -314,7 +315,7 @@ binds {
     Mod5+P      { spawn "org.gnome.seahorse.Application"; }
     Mod5+Y      { spawn "org.nickvision.tubeconverter"; }
     Mod5+X      { spawn "org.gnome.Fractal"; }
-    Mod5+C      { spawn "com.calibre_ebook.calibre"; }
+    Mod5+C      { spawn "calibre"; }
     Mod5+K      { spawn "dev.bragefuglseth.Keypunch"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.

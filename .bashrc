@@ -38,14 +38,14 @@ alias ga='git add -f'
 alias gp='git push'
 
 function nt() {
+    clear -x &&
     cd "$@" &&
     echo -e "\e[31m $(pwd) \e[0m" &&
     ls -hovAN --color=always --group-directories-first | less -RF
 }
-function cl() {
+function md() {
     mkdir -p "${1}"
-    cd "${1}"
+    nt "${1}"
 }
 
-clear
 nt
