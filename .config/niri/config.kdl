@@ -267,11 +267,10 @@ window-rule {
     default-column-width { proportion 0.6667; }
 }
 window-rule {
-    match title="Mozilla Firefox"
-    match title="Foliate"
     match title="Keypunch"
+    match title="Mozilla Firefox"
+    match app-id="chromium-browser"
     match app-id="dev.zed.Zed"
-    match app-id="org.gnome.Builder"
     open-maximized true
 }
 
@@ -304,20 +303,19 @@ binds {
     Mod5+R      { spawn "org.gnome.SoundRecorder"; }
     Mod5+S      { spawn "de.schmidhuberj.Flare"; }
     Mod5+T      { spawn "gnome-system-monitor"; }
-    Mod5+G      { spawn "xdg-open" "/home/leaf/Pictures/Git Cheat Sheet.png"; }
+    Mod5+G      { spawn "xdg-open" "%h/Pictures/Git Cheat Sheet.png"; }
     Mod5+M      { spawn "thunderbird"; }
     Mod5+N      { spawn "nautilus"; }
     Mod5+I      { spawn "firefox"; }
-    Mod5+E      { spawn "chromium-browser" "--ozone-platform=wayland"; }
+    Mod5+Shift+I{ spawn "chromium-browser" "--ozone-platform=wayland"; }
+    Mod5+E      { spawn "zed"; }
     Mod5+O      { spawn "md.obsidian.Obsidian"; }
     // Top and Bottom (qwfpbjluy) (xcdvzkh)
     Mod5+P      { spawn "org.gnome.seahorse.Application"; }
-    Mod5+X      { spawn "org.gnome.Fractal"; }
-    Mod5+B      { spawn "com.github.johnfactotum.Foliate"; }
     Mod5+Y      { spawn "org.nickvision.tubeconverter"; }
+    Mod5+X      { spawn "org.gnome.Fractal"; }
+    Mod5+C      { spawn "com.calibre_ebook.calibre"; }
     Mod5+K      { spawn "dev.bragefuglseth.Keypunch"; }
-    Mod5+Z      { spawn "zed"; }
-    Mod5+D      { spawn "org.gnome.Builder"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
