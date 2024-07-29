@@ -43,6 +43,10 @@ function nt() {
     cd "$@"
     la
 }
+function sd() {
+    cd /run/media/leaf/Leafs\ Drive
+    la
+}
 function md() {
     mkdir -p "$@"
     la
