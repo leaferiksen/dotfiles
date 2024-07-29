@@ -2,11 +2,13 @@
 if [ "$(dconf read /org/gnome/desktop/interface/color-scheme)" = "'prefer-dark'" ]; then
     niri msg action do-screen-transition
     gsettings set org.gnome.desktop.interface color-scheme prefer-light
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
     cp "$HOME/Pictures/Lycoris Recoil.jpg" "$HOME/.local/background.jpg"
     systemctl --user restart swaybg.service
 else
     niri msg action do-screen-transition
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
     cp "$HOME/Pictures/Pi Board.jpg" "$HOME/.local/background.jpg"
     systemctl --user restart swaybg.service
 fi
