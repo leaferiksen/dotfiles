@@ -31,21 +31,48 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+# File Management
 alias up='flatpak update -y && sudo dnf update -y'
 alias dc='xdg-open'
+function la() {
+    clear -x
+    echo -e "\e[31m$(pwd)\e[0m"
+    ls -hovAN --color=always --group-directories-first | less -FRS
+}
+function nt() {
+    cd "$@"
+    la
+}
+function md() {
+    mkdir -p "$@"
+    la
+}
+
+# Trash
+function tl() {
+    clear -x
+    echo -e "\e[31mTrash\e[0m"
+    trash-list
+}
+function tp() {
+    trash-put "$@"
+    la
+}
+function tr() {
+    clear -x
+    echo -e "\e[31mTrash\e[0m"
+    trash-restore
+    tl
+}
+function te() {
+    trash-empty
+    echo -e "\e[33mTrash Emptied! \e[0m"
+}
+
+# Git
 alias gcp='git commit -a && git push'
 alias ga='git add -f'
 alias gp='git push'
 
-function nt() {
-    clear -x &&
-    cd "$@" &&
-    echo -e "\e[31m $(pwd) \e[0m" &&
-    ls -hovAN --color=always --group-directories-first | less -RF
-}
-function md() {
-    mkdir -p "${1}"
-    nt "${1}"
-}
-
+# Terminal startup
 nt
