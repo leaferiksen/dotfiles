@@ -37,7 +37,7 @@ alias dc='xdg-open'
 function la() {
     clear -x
     echo -e "\e[31m$(pwd)\e[0m"
-    ls -hovAN --color=always --group-directories-first | less -FRS
+    ls -hovAN --color=always | less -FRS
 }
 function nt() {
     cd "$@"
@@ -48,7 +48,11 @@ function sd() {
     la
 }
 function md() {
-    mkdir -p "$@"
+    mkdir -p "$(pwd)/$@"
+    la
+}
+function mf() {
+    touch "$(pwd)/$@"
     la
 }
 
@@ -64,9 +68,9 @@ function tp() {
 }
 function tr() {
     clear -x
-    echo -e "\e[31mTrash\e[0m"
     trash-restore
     tl
+    echo -e "\e[31mTrash\e[0m"
 }
 function te() {
     trash-empty
@@ -79,4 +83,4 @@ alias ga='git add -f'
 alias gp='git push'
 
 # Terminal startup
-nt
+la
