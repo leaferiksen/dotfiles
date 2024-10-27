@@ -209,7 +209,7 @@ layout {
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some rounded corners.
-prefer-no-csd
+// prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -300,13 +300,12 @@ binds {
     XF86Search  { spawn "fuzzel"; }
     XF86LaunchA { spawn "set-theme"; }
     // Home Row (arstgmneio)
-    Mod5+A      { spawn "gnome-software"; }
+    Mod5+A      { spawn "gnome-system-monitor"; }
     Mod5+R      { spawn "org.gnome.SoundRecorder"; }
     Mod5+S      { spawn "de.schmidhuberj.Flare"; }
-    Mod5+T      { spawn "gnome-system-monitor"; }
+    Mod5+T      { spawn "set-theme"; }
     Mod5+G      { spawn "xdg-open" "%h/Pictures/Git Cheat Sheet.png"; }
     Mod5+M      { spawn "thunderbird"; }
-    Mod5+N      { spawn "nautilus"; }
     Mod5+I      { spawn "firefox"; }
     Mod5+Shift+I{ spawn "chromium-browser" "--ozone-platform=wayland"; }
     Mod5+E      { spawn "zed"; }
@@ -316,7 +315,7 @@ binds {
     Mod5+Y      { spawn "org.nickvision.tubeconverter"; }
     Mod5+X      { spawn "org.gnome.Fractal"; }
     Mod5+C      { spawn "calibre"; }
-    Mod5+K      { spawn "dev.bragefuglseth.Keypunch"; }
+    Mod5+Z      { spawn "org.zotero.Zotero"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
